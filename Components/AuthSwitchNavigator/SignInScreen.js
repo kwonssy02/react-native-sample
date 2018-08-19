@@ -12,19 +12,19 @@ class SignInScreen extends React.Component {
     render() {
         return (
             <Container style={styles.container}>
-                <Content>
-                    <Form>
-                        <Item>
-                            <Input placeholder="Username" />
-                        </Item>
-                        <Item last>
-                            <Input placeholder="Password" />
-                        </Item>
-                    </Form>
-                    <Button block onPress={this._signInAsync}>
-                        <Text>Sign In</Text>
-                    </Button>
-                </Content>
+                
+                <Text style={{fontSize:20}}>Sign In</Text>
+                <Form style={{marginTop:15}}>
+                    <Item regular>
+                        <Input placeholder="Username" />
+                    </Item>
+                    <Item regular style={{marginTop:5}}>
+                        <Input placeholder="Password" />
+                    </Item>
+                </Form>
+                <Button block onPress={this._signInAsync} style={{marginTop:10}}>
+                    <Text>Sign In</Text>
+                </Button>
             </Container>
         );
     }
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        paddingTop:250
+        paddingTop:200
         // justifyContent: 'space-between',
         // alignItems: 'center',
     },
